@@ -6,7 +6,7 @@ class CustomLinear(nn.Module):
         super().__init__()
         pass
         t0 = torch.empty(out_features, in_features)
-        self.weight = nn.Parameter(torch.nn.init.kaiming_uniform_(t0))
+        self.weight = nn.Parameter(t0)
         t1 = torch.ones(out_features)
         self.bias = nn.Parameter(torch.tensor(t1))
 
